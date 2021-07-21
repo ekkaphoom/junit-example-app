@@ -5,6 +5,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -32,6 +33,11 @@ public class UserBusinessImplTest02_01_Autowired_WithMock {
 
 	@Rule
 	public ExpectedException expectedException = ExpectedException.none();
+
+	@AfterClass
+	public static void afterAll() {
+		System.out.println("##### After All #####");
+	}
 
 	// ##################################################
 	// Mock instance must be reset every time

@@ -6,6 +6,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.jupiter.params.aggregator.ArgumentAccessException;
@@ -31,6 +32,11 @@ public class UserBusinessImplTest01_03_InjectMocks_WithSpy {
 
 	@Rule
 	public ExpectedException expectedException = ExpectedException.none();
+
+	@BeforeClass
+	public static void setupAll() {
+		System.out.println("##### Before All #####");
+	}
 
 	@Before
 	public void setup() {
